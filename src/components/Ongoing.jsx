@@ -1,11 +1,22 @@
 import { StyleSheet, Text, View,Image } from 'react-native'
-import React from 'react'
+import React ,{useState,useEffect} from 'react'
 import drivers from '../data/MechanicData'
 
 const Ongoing = () => {
+
+    const [bookings, setBookings] = useState([])
+
+    useEffect(() => {
+        setBookings(drivers.filter((item)=>{
+            return item.status==='Pending'
+        }))
+
+    }, [])
+
+
   return (
     <View>
-      {drivers.map((item)=>  
+      {bookings.map((item)=>  
       <View style={[styles.mainCont]}>
       <View style={styles.dataCont}>
           <View style={styles.imgCont}>
@@ -77,6 +88,10 @@ charge:{
 
 },
 option:{
+    backgroundColor:'yellow',
+    paddingHorizontal:6,
+    paddingVertical:3,
+    borderRadius:8,
     color:'black'
 
 },

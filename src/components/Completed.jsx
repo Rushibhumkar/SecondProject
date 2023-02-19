@@ -4,19 +4,18 @@ import drivers from '../data/MechanicData'
 
 const Completed = () => {
 
-//   const [history, setHistory] = useState([])
+  const [bookings, setBookings] = useState([])
 
-//   useEffect(() => {
-//     setHistory(MechanicData.filter((item)=>{
-//       return item.status==='completed'
-//     }))
-// console.log(history)
-//   }, [])
+  useEffect(() => {
+    setBookings(drivers.filter((item)=>{
+      return item.status==='completed'
+    }))
+  }, [])
   
 
   return (
     <View>
-      {drivers.map((item)=>  
+      {bookings.map((item)=>  
       <View style={[styles.mainCont]}>
       <View style={styles.dataCont}>
           <View style={styles.imgCont}>
@@ -89,6 +88,10 @@ charge:{
 
 },
 option:{
+    backgroundColor:'#4BF63F',
+    paddingHorizontal:6,
+    paddingVertical:3,
+    borderRadius:8,
     color:'black'
 
 },
