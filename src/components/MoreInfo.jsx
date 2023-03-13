@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Linking, F
 import React from 'react'
 import Icon from 'react-native-vector-icons/AntDesign'
 import oneMech from '../data/oneMech'
-import users from './UsersData'
+import users from '../data/UsersData'
 // import UserReviews from './UserReviews'
 
 const MoreInfo = ({ navigation, route }) => {
@@ -31,7 +31,7 @@ const MoreInfo = ({ navigation, route }) => {
                     </View>
                 </View>
                 <View style={[styles.expCont]}>
-                    <Text style={[styles.tb, { fontSize: 20 }]}>Experience: 5years</Text>
+                    <Text style={[styles.tb, { fontSize: 20 }]}>Experience: 1 year</Text>
                     <Text style={[styles.tb, { paddingHorizontal: 10 }]}>{oneMech.desc}</Text>
                 </View>
                 <View style={[styles.contactDetailsCont]}>
@@ -71,11 +71,11 @@ const MoreInfo = ({ navigation, route }) => {
                                             <View style={styles.col}>
                                                 <Text style={styles.userName}>{item.name}</Text>
                                                 <View style={styles.starRow}>
-                                                    <Icon name='staro' size={20} color={'black'} />
-                                                    <Icon name='staro' size={20} color={'black'} />
-                                                    <Icon name='staro' size={20} color={'black'} />
-                                                    <Icon name='staro' size={20} color={'black'} />
-                                                    <Icon name='staro' size={20} color={'black'} />
+                                                    <Icon name='star' size={20} color={'#E6FF00'} />
+                                                    <Icon name='star' size={20} color={'#E6FF00'} />
+                                                    <Icon name='star' size={20} color={'#E6FF00'} />
+                                                    <Icon name='star' size={20} color={'#E6FF00'} />
+                                                    <Icon name='star' size={20} color={'#E6FF00'} />
                                                 </View>
                                             </View>
                                         </View>
@@ -210,6 +210,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 4,
         marginBottom: 4,
         borderRadius: 8,
+        backgroundColor: '#DECAFF',
     },
     tb: {
         color: 'black'

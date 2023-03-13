@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, FlatList, Image } from 'react-native'
 import React from 'react'
 import { Icon } from 'react-native-vector-icons/AntDesign'
-import users from './UsersData'
+import users from '../data/UsersData'
 // import { FlatList } from 'react-native-gesture-handler'
 
 const UserReviews = (users) => {
