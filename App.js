@@ -2,15 +2,15 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import MainFile from './src/Main/MainFile';
 import {NavigationContainer} from '@react-navigation/native';
+import MainStack from './src/Main/MainStack';
+import Maps from './src/components/Maps';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <View style={styles.cont}>
-        <Text style={styles.text}>Booking Details</Text>
-      </View>
-      <MainFile />
+      <MainStack />
       {/* <History/> */}
+      {/* <Maps /> */}
     </NavigationContainer>
   );
 };
